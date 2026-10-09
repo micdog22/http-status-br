@@ -1,0 +1,18 @@
+{
+  "name": "http-status-br",
+  "version": "1.0.0",
+  "description": "Todos os códigos de status HTTP explicados em português, com página de consulta e comando para o terminal.",
+  "type": "module",
+  "bin": { "http-status": "./bin/http-status.js" },
+  "exports": {
+    ".": "./src/codes.js",
+    "./search": "./src/search.js"
+  },
+  "files": ["bin", "src/codes.js", "src/search.js"],
+  "engines": { "node": ">=18" },
+  "keywords": ["http", "status", "codigos-http", "api", "rest", "portugues", "cli"],
+  "scripts": { "test": "node --test" },
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/micdog22/http-status-br.git" },
+  "homepage": "https://micdog22.github.io/http-status-br/"
+}

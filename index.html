@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTTP Status BR — todos os códigos de status HTTP explicados em português</title>
+  <meta name="description" content="Consulte os códigos de status HTTP em português: o que cada um significa, quando usar na sua API, causas comuns e as confusões clássicas (401 × 403, 502 × 504…).">
+  <meta name="theme-color" content="#1d4ed8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚦</text></svg>">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#codigos">Pular para os códigos</a>
+  <header class="site-header">
+    <h1>HTTP Status BR</h1>
+    <p class="lead">Todos os códigos de status HTTP explicados em português, para quem cria APIs e para quem está depurando um erro.</p>
+  </header>
+
+  <main>
+    <section class="card search-card" aria-label="Busca">
+      <label for="q">Buscar por número ou palavra</label>
+      <input type="search" id="q" placeholder="404, timeout, rate limit, não encontrado…" autocomplete="off" spellcheck="false" aria-describedby="q-help">
+      <p class="muted small" id="q-help">A busca ignora acentos. Dica: tecle <kbd>/</kbd> para voltar aqui.</p>
+      <fieldset class="classes">
+        <legend class="sr-only">Filtrar por classe</legend>
+        <label class="chip"><input type="radio" name="cls" value="" checked> Todos</label>
+        <label class="chip c1"><input type="radio" name="cls" value="1"> 1xx · Informativo</label>
+        <label class="chip c2"><input type="radio" name="cls" value="2"> 2xx · Sucesso</label>
+        <label class="chip c3"><input type="radio" name="cls" value="3"> 3xx · Redirecionamento</label>
+        <label class="chip c4"><input type="radio" name="cls" value="4"> 4xx · Erro do cliente</label>
+        <label class="chip c5"><input type="radio" name="cls" value="5"> 5xx · Erro do servidor</label>
+      </fieldset>
+      <p class="count" id="count" aria-live="polite"></p>
+      <nav class="doubts-nav" aria-label="Dúvidas comuns" id="doubts-nav"></nav>
+    </section>
+
+    <section id="codigos" aria-labelledby="t-codes">
+      <h2 id="t-codes" class="sr-only">Códigos</h2>
+      <div id="groups"></div>
+      <p class="card empty" id="empty" hidden>Nenhum código encontrado. Tente outra palavra ou outro número.</p>
+    </section>
+
+    <section id="duvidas" aria-labelledby="t-doubts">
+      <h2 id="t-doubts">Dúvidas comuns</h2>
+      <div id="doubts"></div>
+    </section>
+
+    <section class="card" aria-labelledby="t-cli">
+      <h2 id="t-cli">No terminal</h2>
+      <p>Também dá para consultar pelo terminal, com Node.js 18 ou mais recente:</p>
+      <pre class="term"><code>npm install -g github:micdog22/http-status-br
+http-status 404
+http-status "não encontrado"
+http-status 5xx --json</code></pre>
+    </section>
+    <p class="status-toast" id="toast" role="status" aria-live="polite"></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Tudo roda no seu navegador. Código aberto no <a href="https://github.com/micdog22/http-status-br">GitHub</a> · Licença MIT</p>
+    <p>Fonte: RFC 9110 (semântica do HTTP) e os RFCs indicados em cada código.</p>
+  </footer>
+</body>
+</html>
