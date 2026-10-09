@@ -13,7 +13,7 @@ function run(...args) {
 test('mostra a explicação de um código', () => {
   const r = run('404');
   assert.equal(r.code, 0);
-  assert.match(r.out, /^404 Not Found — Não encontrado\n/);
+  assert.match(r.out, /^404 Not Found: Não encontrado\n/);
   assert.match(r.out, /4xx · Erro do cliente · RFC 9110, seção 15\.5\.5/);
   assert.match(r.out, /Quando usar/);
   assert.match(r.out, /Causas comuns\n {2}• URL digitada errada/);
@@ -34,8 +34,8 @@ test('busca por palavras com e sem acento', () => {
 
 test('vários códigos de uma vez e listagem por classe', () => {
   const r = run('401', '403');
-  assert.match(r.out, /401 Unauthorized — Não autenticado/);
-  assert.match(r.out, /403 Forbidden — Proibido/);
+  assert.match(r.out, /401 Unauthorized: Não autenticado/);
+  assert.match(r.out, /403 Forbidden: Proibido/);
   assert.match(r.out, /Dúvida comum: 401 ou 403\?/);
   assert.match(run('1xx').out, /4 códigos para “1xx”/);
   assert.match(run().out, /^62 códigos:/);

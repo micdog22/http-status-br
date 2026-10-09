@@ -61,7 +61,7 @@ function wrap(text, width, indent = '', firstIndent = indent) {
   return lines.join('\n');
 }
 
-const title = (entry) => `${entry.code} ${entry.phrase} — ${entry.name}`;
+const title = (entry) => `${entry.code} ${entry.phrase}: ${entry.name}`;
 
 function formatEntry(entry, width) {
   const cls = CLASSES[classOf(entry.code)];
@@ -83,7 +83,7 @@ function formatEntry(entry, width) {
   return out.join('\n');
 }
 
-const formatLine = (entry) => `${paint(`1;${CLASS_COLORS[classOf(entry.code)]}`, String(entry.code))}  ${entry.phrase} — ${entry.name}`;
+const formatLine = (entry) => `${paint(`1;${CLASS_COLORS[classOf(entry.code)]}`, String(entry.code))}  ${entry.phrase}: ${entry.name}`;
 
 function toJson(entry) {
   const cls = CLASSES[classOf(entry.code)];

@@ -1,4 +1,4 @@
-# HTTP Status BR — todos os códigos de status HTTP explicados em português (HTML + JS + Node CLI)
+# HTTP Status BR: todos os códigos de status HTTP explicados em português (HTML + JS + Node CLI)
 
 Guia de consulta dos códigos de status HTTP em português claro, para quem cria APIs e para quem está tentando entender um erro. Cada código traz o nome oficial em inglês (conforme o RFC 9110), um nome em português, a explicação, quando usar, as causas mais comuns, os códigos relacionados e a referência ao RFC. Funciona como página web e como comando no terminal.
 
@@ -40,7 +40,7 @@ http-status 429 --json       # saída em JSON
 Saída de `http-status 404`:
 
 ```text
-404 Not Found — Não encontrado
+404 Not Found: Não encontrado
 4xx · Erro do cliente · RFC 9110, seção 15.5.5
 
 O servidor não encontrou nada no endereço pedido, ou não quer revelar que o
@@ -85,7 +85,7 @@ Os testes conferem a integridade dos dados (códigos únicos, todos os campos pr
 
 ## Fontes
 
-- [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110) — semântica do HTTP, onde está a maior parte dos códigos.
+- [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110): semântica do HTTP, onde está a maior parte dos códigos.
 - RFC 2518 (102), RFC 8297 (103), RFC 4918 (207, 423, 424, 507), RFC 5842 (208, 508), RFC 3229 (226), RFC 8470 (425), RFC 6585 (428, 429, 431, 511), RFC 7725 (451), RFC 2295 (506), RFC 2774 (510) e RFC 2324 (418).
 
 As explicações são um resumo em português para consulta rápida; em caso de dúvida, vale o texto do RFC indicado em cada código.
@@ -96,4 +96,4 @@ Issues e pull requests são bem-vindos.
 
 ## Licença
 
-MIT — veja [LICENSE](LICENSE).
+MIT. Veja [LICENSE](LICENSE).
